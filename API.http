@@ -1,0 +1,99 @@
+# ****************************** API Employee *************************
+GET http://localhost:8080/employees
+
+
+###
+POST http://localhost:8080/employees
+Content-Type: application/json
+
+{
+    "id":8,
+    "firstName":"fredy",
+    "lastName":"albert",
+    "emailAddress":"groupeh@gmail.com",
+    "phoneNumber":"0467774392"
+}
+###
+# ****************************** API Visitors *************************
+GET http://localhost:8080/visitors
+
+###
+
+GET http://localhost:8080/visitors/present
+
+###
+
+GET http://localhost:8080/visitors/attendus
+
+###
+POST  http://localhost:8080/visitors
+Content-Type: application/json
+
+{
+    "id":8,
+    "firstName":"Rigobert",
+    "lastName":"Robert",
+    "companyName":"TWCM"
+}
+
+###
+
+PUT   http://localhost:8080/visitors/3
+Content-Type: application/json
+
+{
+    "id":3,
+    "firstName":"fredy2",
+    "lastName":"albert5",
+    "companyName":"cgcm"
+}
+
+###
+
+DELETE  http://localhost:8080/visitors/2
+
+###
+
+# ****************************** API visits *************************
+
+GET http://localhost:8080/visits
+
+###
+
+POST  http://localhost:8080/visits
+Content-Type: application/json
+
+{
+    "id": 0,
+    "visitor": {
+      "id":8,
+      "firstName": "Mercury",
+      "lastName": "Fredy",
+      "companyName": "Camtel"
+    },
+    "host": {
+      "id": 1,
+      "firstName": "henri",
+      "lastName": "Palmaaaa",
+      "emailAddress": "henri@gmail.com",
+      "phoneNumber": "0467774395"
+    },
+    "date": "2023-02-23",
+    "plannedArrivalTime": "13:30:45",
+    "plannedDuration": 60
+   
+  }
+
+
+###
+
+GET  http://localhost:8080/visits/2024-03-20
+
+###
+GET  http://localhost:8080/visits/visitors/4
+
+###
+PUT http://localhost:8080/visits/arrival/7
+
+###
+PUT http://localhost:8080/visits/departure/7
